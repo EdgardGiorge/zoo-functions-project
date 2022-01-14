@@ -6,7 +6,7 @@ function countEntrants(entrants) {
     adult: entrants.reduce((acc, { age }) => (age >= 18 && age < 50 ? acc + 1 : acc), 0),
     child: entrants.reduce((acc, { age }) => (age < 18 ? acc + 1 : acc), 0),
     senior: entrants.reduce((acc, { age }) => (age >= 50 ? acc + 1 : acc), 0),
-  }; // Separa os visitantes baseado na faixa de idade, compara a idade da entrada e acumula no objeto correspondente (começa em 0) e retorna o tipo e quantidade
+  }; // Separa os visitantes baseado na faixa de idade, compara a idade da entrada e acumula no objeto correspondente (começa em 0) e retorna quantidade de pessoas de cada faixa
   return countVisitors;// seu código aqui
 }
 
